@@ -1,9 +1,27 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
+using namespace std; 
 
-// Kadane Algo
+/* Leetcode H.W
+    Problem 11, 88, 75
+        Two Pointer, sort , sort
+*/
+
+// Kadane’s Algorithm
+// Leetcode 53 - Maximum Subarray
+int maxSubArray_Optimized(vector<int>& nums) {
+
+    int currentSum = nums[0];
+    int maxSum = nums[0];
+
+    for (int i = 0; i < nums.size(); i++) {
+        currentSum = max(nums[i], currentSum + nums[i]);  // Start new subarray / continue old sub array
+        maxSum = max(maxSum, currentSum);
+    }
+
+    return maxSum;
+}
 
 // Leetcode 283 - Brute Force
 void moveZeroes_Brute(vector<int>& nums) {      
