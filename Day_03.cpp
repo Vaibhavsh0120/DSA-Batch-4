@@ -23,6 +23,7 @@ int maxSubArray_Optimized(vector<int>& nums) {
     return maxSum;
 }
 
+// Day_03_01
 // Leetcode 283 - Brute Force
 void moveZeroes_Brute(vector<int>& nums) {      
 
@@ -41,6 +42,7 @@ void moveZeroes_Brute(vector<int>& nums) {
         zeros--;
     }
 }
+
 
 // Leetcode 283 - Optimized - Two Pointer Approach
 void moveZeroes_Optimized(vector<int>& nums) {
